@@ -3,16 +3,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from './pages/Home';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Provider} from 'react-redux';
+import store from './app/store';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
-
-  const store = {
-    counter: 0,
-    increment: () => {
-      store.counter += 1;
-    },
-  };
 
   return (
     <Provider store={store}>
