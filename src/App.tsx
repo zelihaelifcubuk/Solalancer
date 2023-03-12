@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp'
 import LogIn from './pages/LogIn';
+import EmailValidation from './pages/EmailValidation';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // import {Provider} from 'react-redux';
@@ -25,6 +26,10 @@ function App(): JSX.Element {
         <Stack.Screen
           name="LogIn"
           component={LogIn}
+        />
+        <Stack.Screen
+          name="EmailValidation"
+          component={EmailValidation}
         />
       </Stack.Navigator>
     </NavigationContainer>
