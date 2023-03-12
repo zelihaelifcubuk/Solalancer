@@ -13,6 +13,6 @@ export default StyleSheet.create({
     fontSize: 42,
     lineHeight: 84,
     fontWeight: 'bold',
-    textAlign: 'center',
+    padding: 10,
   },
 });

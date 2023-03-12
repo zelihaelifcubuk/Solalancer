@@ -2,19 +2,28 @@ import React from 'react';
 import {View, Text, ImageBackground} from 'react-native';
 import styles from './Home.style';
 
-const Home = () => {
+import ButtonSignUp from '../../components/Button-SignUp';
+import ButtonLogIn from '../../components/Button-LogIn';
+
+function Home({navigation}: {navigation: any}){
+
+  function goToSignUp(){
+    navigation.navigate('SignUp');
+  }
+
+  function goToLogIn(){
+    navigation.navigate('LogIn');
+  }
+
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../assets/solalancer-intro-bg-empty.png')}
+        source={require('../../assets/solalancer-logo-bg.png')}
         resizeMode="cover"
         style={styles.image}>
-        <ImageBackground
-          source={require('../../assets/solalancer-intro-bg.png')}
-          resizeMode="cover"
-          style={styles.image}>
+          <ButtonSignUp title="Kayıt Ol" onPress={goToSignUp}/>
           <Text style={styles.text}>Hoşgeldin</Text>
-        </ImageBackground>
+          <ButtonLogIn title="Giriş Yap" onPress={goToLogIn} />
       </ImageBackground>
     </View>
   );
